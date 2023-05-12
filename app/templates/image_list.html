@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+    {% block content %}
+
+        <div class="alert alert-primary" role="alert">
+            <h1>Imagenes Almacenadas en Amazon S3</h1>
+        </div>
+        
+        <div class="row">
+            {% for url in image_urls %}
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ url }}" class="card-img-top" alt="My Image">
+                    </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    {% endblock %}
+

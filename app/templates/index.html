@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+    <div class="alert alert-primary" role="alert">
+        <h1>Integracion de Servicios</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+            <div class="card-header">
+                S3 Amazon
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Imagenes Guardadas en S3</h5>
+                <p class="card-text">S3 (Simple Storage Service) es un servicio de almacenamiento de objetos altamente escalable, 
+                    duradero y seguro, proporcionado por Amazon Web Services (AWS).
+                </p>
+                <a href="{%url 's3_images'%}" class="btn btn-primary">Ver Servicio</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card">
+            <div class="card-header">
+                Azure Translate
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Traductor</h5>
+                <p class="card-text">Azure Translate es un servicio de traducción automática proporcionado por Microsoft Azure. 
+                    El servicio utiliza tecnología de inteligencia artificial y aprendizaje automático para proporcionar traducciones 
+                    precisas y coherentes entre múltiples idiomas.
+                </p>
+                <a href="{%url 'AzureTranslate'%}" class="btn btn-primary">Ver Servicio</a>
+            </div>
+            </div>
+        </div>
+
+
+    
+    </div>
+    
+
+    {% endblock %}

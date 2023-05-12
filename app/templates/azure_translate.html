@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+    {% block content %}
+
+        <div class="alert alert-primary" role="alert">
+            <h1>Azure Translate Service</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="mb-3">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <label for="basic-url" class="form-label">Texto a Traducir:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="uno" type="text" value="{{ uno }}" required>
+                        </div>
+
+                        <label for="idioma">Selecciona un idioma:</label>
+                        <select class="form-select" aria-label="Default select example" name ="idioma" id="idioma">
+                            <option selected value="en">Inglés</option>
+                            <option value="fr">Francés</option>
+                            <option value="ar">Arabe</option>
+                        </select>
+                        <br><br>
+
+                        <button type="submit" class="btn btn-success">Traducir</button>
+                    </form>
+                </div>
+            </div>
+    
+            <div class="col-6">
+                <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header">traducción {{idioma}}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ dos }}</h5>
+                        <p class="card-text">{{textresponse}} en el idioma: {{language}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        
+    {% endblock %}

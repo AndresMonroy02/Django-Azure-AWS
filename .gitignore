@@ -1,0 +1,9 @@
+.env
+
+# VirtualEnv
+venv
+
+*/__pycache__/
+*.py[cod]
+
+
